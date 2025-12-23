@@ -5,10 +5,10 @@ import {
 } from 'recharts';
 import { Filter, Calendar, List, TrendingUp, TrendingDown, Wallet, Trash2, History, Search } from 'lucide-react';
 
-// Grafik uchun chiroyli ranglar
+// ranglar
 const COLORS = ['#6366f1', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899', '#06b6d4', '#4b5563'];
 
-// Hisobot va tranzaksiyalar tarixini ko'rsatadigan sahifa
+// hisobot va tranzaksiyalar tarixini ko'rsatadigan sahifa
 const SummaryPage = () => {
     // Contextdan kerakli ma'lumotlarni olamiz
     const { transactions, totals, deleteTransaction } = useFinance();

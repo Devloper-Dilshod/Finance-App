@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { useFinance } from '../context/FinanceContext';
 import { Trash2, TrendingUp, TrendingDown, Filter } from 'lucide-react';
 
-// Tranzaksiyalar tarixi sahifasi (Jadval ko'rinishida va Mobilga moslagan)
+// tranzksiyalar tarixi sahifasi (\
 const HistoryPage = () => {
     // Context hook orqali tranzaksiyalarni olamiz
     const { transactions, deleteTransaction } = useFinance();
@@ -15,7 +15,7 @@ const HistoryPage = () => {
     // Mavjud hamma kategoriyalarni ruyxatga olamiz
     const allCategories = ['Barchasi', ...new Set(transactions.map(t => t.category))];
 
-    // Filtrlash funksiyasi (memoize qilingan)
+    // Filtrlash funksiyasi 
     const filteredRows = useMemo(() => {
         return transactions.filter(t => {
             const dateMatch = (!startDate || t.date >= startDate) && (!endDate || t.date <= endDate);
@@ -68,7 +68,7 @@ const HistoryPage = () => {
                 </div>
             </div>
 
-            {/* Tranzaksiyalar ro'yxati (Mobil uchun chiroyli ko'rinish) */}
+            {/* Tranzaksiyalar ro'yxati */}
             <div className="space-y-3">
                 {filteredRows.length > 0 ? (
                     filteredRows.map(t => (

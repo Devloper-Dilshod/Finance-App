@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { useFinance } from '../context/FinanceContext';
 import { Check } from 'lucide-react';
 
-// Kirim yoki Chiqim qo'shish formasi (Yaxshilangan dizayn)
+// Kirim yoki Chiqim qo'shish formasi 
 const TransactionForm = ({ isIncome }) => {
-    // Contextdan ma'lumot qo'shish funksiyasini olamiz
+    // contextdan malumot qo'shish funksiyasini olamiz
     const { addTransaction } = useFinance();
 
-    // Formalar uchun state-lar
+    // formalar uchun state-lar
     const [amount, setAmount] = useState('');
     const [category, setCategory] = useState('');
     const [description, setDescription] = useState('');
@@ -18,10 +18,10 @@ const TransactionForm = ({ isIncome }) => {
     const handleSave = (e) => {
         e.preventDefault();
 
-        // Agar summa yoki kategoriya bo'lmasa saqlamaymiz
+        // agar summa yoki kategoriya bo'lmasa saqlamslik
         if (!amount || !category) return;
 
-        // Yangi tranzaksiya obyekti
+        // yangi tranzaksiya obyekti
         addTransaction({
             amount: parseFloat(amount),
             category,
@@ -30,17 +30,17 @@ const TransactionForm = ({ isIncome }) => {
             is_income: isIncome
         });
 
-        // Formani tozalash
+        // formani tozalash
         setAmount('');
         setCategory('');
         setDescription('');
 
-        // Muvaffaqiyatli saqlanganini ko'rsatish
+        // muvaffaqiyatli saqlanganligini ko'rsatish
         setSaved(true);
         setTimeout(() => setSaved(false), 2000);
     };
 
-    // Tanlash uchun kategoriyalar
+    // Is_income bo'lsa tanlash uchun kategoriyalar
     const categoriesList = isIncome
         ? ['Oylik', 'Bonus', 'Sovg\'a', 'Ijaradan']
         : ['Ovqat', 'Yo\'l kira', 'Kiyim', 'Uy-ro\'zg\'or', 'Boshqa'];

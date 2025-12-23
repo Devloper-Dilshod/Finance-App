@@ -7,7 +7,7 @@ import ExpensePage from './pages/ExpensePage';
 import HistoryPage from './pages/HistoryPage';
 import AnalyticsPage from './pages/AnalyticsPage';
 
-// Ilovani boshqaruvchi asosiy komponent
+// ilovani boshqaruvchi asosiy komponent
 function App() {
   return (
     <FinanceProvider>
@@ -18,7 +18,7 @@ function App() {
           <header className="bg-white px-6 py-5 flex items-center justify-between border-b border-slate-100 sticky top-0 z-40">
             <h1 className="text-xl font-black text-slate-800 tracking-tight">Finance Tracker</h1>
             <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-              <span className="text-xs font-bold text-blue-600">JD</span>
+              <span className="text-xs font-bold text-blue-600">DS</span>
             </div>
           </header>
 

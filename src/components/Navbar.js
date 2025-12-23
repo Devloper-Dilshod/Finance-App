@@ -2,11 +2,11 @@ import React from 'react';
 import { PlusCircle, MinusCircle, List, PieChart as ChartIcon } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
-// Saytning pastki qismidagi menyu (Mobile Web App style)
+//  pastki qismidagi menyu (
 const Navbar = () => {
     const location = useLocation();
 
-    // Menyudagi tugmalar
+    // menyudagi tugmalar
     const navItems = [
         { name: 'Kirim', path: '/income', icon: PlusCircle },
         { name: 'Chiqim', path: '/expense', icon: MinusCircle },
@@ -14,7 +14,7 @@ const Navbar = () => {
         { name: 'Grafika', path: '/analytics', icon: ChartIcon },
     ];
 
-    // Qaysi sahifa faolligini tekshirish
+    // qaysi sahifa faolligini tekshirish
     const isActive = (path) => location.pathname === path;
 
     return (

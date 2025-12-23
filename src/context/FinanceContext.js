@@ -1,9 +1,9 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-// Ma'lumotlarni saqlash va boshqarish uchun context yaratamiz
+// malumotlarni saqlash va boshqarish uchun context yaratamiz
 const FinanceContext = createContext();
 
-// Boshqa komponentlarda contextdan oson foydalanish uchun custom hook
+// boshqa komponentlarda contextdan oson foydalanish uchun custom hook
 export const useFinance = () => useContext(FinanceContext);
 
 // Asosiy provider komponenti - hamma ma'lumotlar shu erda saqlanadi
