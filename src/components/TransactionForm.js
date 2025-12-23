@@ -42,8 +42,8 @@ const TransactionForm = ({ isIncome }) => {
 
     // Is_income bo'lsa tanlash uchun kategoriyalar
     const categoriesList = isIncome
-        ? ['Oylik', 'Bonus', 'Sovg\'a', 'Ijaradan']
-        : ['Ovqat', 'Yo\'l kira', 'Kiyim', 'Uy-ro\'zg\'or', 'Boshqa'];
+        ? ['Oylik', 'Bonus', 'Sovg\'a', 'Ijaradan', "Boshqa" , 'Investitsiya' , "Qarz qaytarish"]
+        : ['Ovqat', 'Yo\'l kira', 'Kiyim', 'Uy-ro\'zg\'or', 'Boshqa' , 'Sog\'liq', 'O\'yin-kulgi'];
 
     return (
         <div className="max-w-md mx-auto animate-in fade-in duration-500">
